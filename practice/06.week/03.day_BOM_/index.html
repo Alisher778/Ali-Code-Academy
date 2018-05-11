@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Downloading progress:
+<div id="div">
+<progress value="22" max="100" id="progress">
+</progress>
+<span id="percent"></span>
+</div>
+
+<p><strong>Note:</strong> The progress tag is not supported in Internet Explorer 9 and earlier versions.</p>
+<script>
+  var pro = document.getElementById('progress');
+    var per = document.getElementById('percent');
+    setInterval(function(){
+      window.navigator.getBattery()
+      .then(function(data){
+        pro.value = data.level *100;
+            per.innerHTML = data.level *100+"%";
+            console.log(data.level)
+    }).catch(function(err){
+      console.log(err)
+  });
+    },5000);
+    
+   
+  
+    
+</script>
+</body>
+</html>

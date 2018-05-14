@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+  #car1, #car2{position: relative; height: 170px; border-bottom: 4px solid}
+    #car1 img, #car2 img{width: 160px; position: absolute; right: 0px; bottom: 10px;}
+    #car2 img{transform: scaleX(-1);}
+    #car1 img.rotate{transform: scaleX(-1);}
+    #car2 img.rotate{transform: scaleX(1);}
+  </style>
+</head>
+<body>
+  <div id="app" style="position: relative;">
+    <div id="car1">
+      <img src="car1.png" alt="">
+    </div>
+    <div id="car2">
+      <img src="car2.png" alt="">
+    </div>
+  </div>
+
+  <input type="text">
+  
+  <button id="click">Show</button>
+  <button id="click-hide">Hide</button>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="jquery.js"></script>
+  <style>
+    nav{position: fixed; top: 0; left: 0; z-index: 2; width: 100vw;}
+    body{padding: 0; margin:0;}
+    section{height: 100vh; width: 100vw;position: relative;}
+    #first{background: red}
+    #sec{background: yellow}
+    #third{background: green}
+    .red{background: red;}
+  </style>
+  <script>
+    $(document).ready(function(){
+      $('button').click(function(e){
+        e.preventDefault();
+        var getElId = $(this).attr('class');
+        var elPosition = $(getElId).position().top;
+        $('body, html').animate({scrollTop: elPosition}, 1000);
+        var scrollPosition = $('html').scrollTop();
+        var htmlHight = $('html').height();
+
+      });
+
+      $(document).scroll(function(){
+        var sec = $('#sec').position().top;
+        var fir = $('#first').position().top;
+        var th = $('#third').position().top;
+        var scroll = $(window).scrollTop();
+        
+        if(scroll+50 > fir){
+          $('button').css('background', 'white')
+          $('#musor').css('background', 'pink')
+        } else if(scroll+50 > sec){
+          $('button').css('background', 'white')
+          $('#musor2').css('background', 'aqua')
+        } else if(scroll+50 > th){
+          $('button').css('background', 'white')
+          $('#musor3').css('background', 'yellow')
+        }else {
+          $('#musor').css('background', 'white')
+        }
+      })
+    })
+    
+  </script>
+</head>
+<body>
+  <main>
+    <nav>
+      <button class="#first" id="musor">1</button>
+      <button class="#sec" id="musor2">1</button>
+      <button class="#third" id="musor3">1</button>
+    </nav>
+    <section id="first"></section>
+    <section id="sec"></section>
+    <section id="third"></section>
+  </main>
+
+</body>
+</html>

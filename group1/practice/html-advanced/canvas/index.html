@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  </head>
+  <body>
+    <input type="color" onchange="chooseColor(this.value)">
+    <canvas id="canvas" height="500" width="800">
+    </canvas>
+    <section id="tool-bar">
+      <header>
+        <nav>
+          <div id="demo-btn"><span class="lnr lnr-move"></span></div>
+          <ul id="main-nav">
+            <li id="text"><span class="lnr lnr-text-format"></span></li>
+            <li id="img-bar"><span class="lnr lnr-camera"></span></li>
+            <li id="brush"><span class="lnr lnr-highlight"></span></li>
+          </ul>
+          <div id="close-btn"><span class="lnr lnr-cross"></span></div>
+        </nav>
+      </header>
+      <div id="tools-body">
+        <div id="brush-tools">
+          <div class="brush-wrap"><img src="img/svg/01.svg" alt="brush tools"></div>
+          <div class="brush-wrap"><img src="img/svg/02.svg" alt="brush tools"></div>
+          <div class="brush-wrap"><img src="img/svg/03.svg" alt="brush tools"></div>
+          <div class="brush-wrap"><img src="img/svg/04.svg" alt="brush tools"></div>
+          <div class="brush-wrap"><img src="img/svg/05.svg" alt="brush tools"></div>
+          <div class="brush-wrap"><img src="img/svg/06.svg" alt="brush tools"></div>
+          <div class="brush-wrap"><img src="img/svg/07.svg" alt="brush tools"></div>
+          <div class="brush-wrap"><img src="img/svg/08.svg" alt="brush tools"></div>
+          <div class="brush-wrap"><img src="img/svg/09.svg" alt="brush tools"></div>
+        </div>
+        <div id="color-panel">
+
+          <div class="btn-wrapper">
+          <button class="colors" onclick="chooseColor(this)" id="red"></button>
+        </div>
+          <div class="btn-wrapper">
+          <button class="colors" onclick="chooseColor(this)" id="black"></button>
+        </div>
+          <div class="btn-wrapper">
+          <button class="colors" onclick="chooseColor(this)" id="green"></button>
+        </div>
+          <div class="btn-wrapper">
+          <button class="colors" onclick="chooseColor(this)" id="yellow"></button>
+        </div>
+          <div class="btn-wrapper">
+          <button class="colors" onclick="chooseColor(this)" id="blue"></button>
+        </div>
+          <div class="btn-wrapper">
+          <button class="colors" onclick="chooseColor(this)" id="orange"></button>
+        </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

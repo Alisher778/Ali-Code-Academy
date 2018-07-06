@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="jquery.min.js"></script>
+  <script src="main.js"></script>
+  <style>
+    header{background: #37474f; color: #fff;}
+    header a{color: #fff;}
+    nav{display: flex;align-items: flex-start;justify-content: space-between; max-width: 1200px;}
+    #nav-link{display: flex; justify-content: space-around; flex-grow: 3;}
+    #logo{flex-grow: 1; margin-top: 12px; padding-left: 20px;}
+    #nav-link>li{list-style: none;}
+    #dropdown{display: none;}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div id="logo">Logo</div>
+      <ul id="nav-link">
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>
+          <a href="#" id="sub-link">Dropdown Menu</a>
+          <ul id="dropdown">
+            <li>Menu</li>
+            <li>Menu</li>
+            <li>Menu</li>
+            <li>Menu</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>
